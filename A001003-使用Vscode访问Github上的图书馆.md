@@ -20,4 +20,8 @@ Github Pull Requests and Issues extension
 
 ### 4. 第三步：关联Github账户和Vscode
 
+- 登陆管理员个人的Github账号（左侧边框栏-账户-登陆）
+- 左侧边框栏-账户-使用Github登陆以使用Github Pull Requests and Issues extension
+- 
+
 5. 第四步：链接库
