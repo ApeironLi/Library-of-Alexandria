@@ -15,5 +15,7 @@ https://git-scm.com/download
 ### 3. 第二步：安装Git插件
 Github Pull Requests and Issues extension
 
-### 3. 第三步：登陆GitHub账号
+### 4. 第三步：登陆GitHub账号
 Github Pull Requests and Issues extension
+
+### 5. 第四步：链接库
