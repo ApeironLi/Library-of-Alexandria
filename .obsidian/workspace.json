@@ -83,7 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 401.5
+    "width": 293.5
   },
   "right": {
     "id": "dff91031da32446c",
@@ -179,7 +179,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 465.5
+    "width": 363.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -195,8 +195,8 @@
   "active": "648a403274fcef6e",
   "lastOpenFiles": [
     "A001001-工作手册大纲.md",
-    "A001002-Obsidian快速入门介绍.md",
     "A001003-使用Vscode访问Github上的图书馆.md",
+    "A001002-Obsidian快速入门介绍.md",
     "ApeironDaily/2023-06-11.md",
     "未命名.canvas",
     "ApeironDaily",
