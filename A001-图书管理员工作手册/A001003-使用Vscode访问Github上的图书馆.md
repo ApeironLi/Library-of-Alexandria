@@ -26,6 +26,7 @@ Github Pull Requests and Issues extension
 ### 4. 项目管理
 
 点击左侧边框栏“源代码管理”，可以通过“打开文件夹”打开一个本地源码项目，或通过“克隆仓库”打开一个Github上的源码项目。在源代码管理打开后，左侧栏目上侧源代码管理后的三个点中把“源代码管理存储库”视图打开。
+https://code.visualstudio.com/docs/sourcecontrol/overview
 
 #### 4.1 本地项目上传
 - 选择一个本地项目。
@@ -33,4 +34,4 @@ Github Pull Requests and Issues extension
 - 为本次上传添加一段简单的commit并点击提交（源代码管理栏目中），再点击同步更改即可。
 
 #### 4.2 克隆仓库并更改
-
+- 选择一个需要克隆的Github项目，选择一个本地文件夹，该项目将被克隆到这个本地文件夹中。
