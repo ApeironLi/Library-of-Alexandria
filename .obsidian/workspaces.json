@@ -1,0 +1,201 @@
+{
+  "workspaces": {
+    "日常工作区": {
+      "main": {
+        "id": "0984292e0a574b27",
+        "type": "split",
+        "children": [
+          {
+            "id": "9031a102b9c15fac",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "648a403274fcef6e",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "A001001-工作手册大纲.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "db79cbe735ea3aba",
+        "type": "split",
+        "children": [
+          {
+            "id": "e87f8f6d086ace03",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "b66b169576fffba0",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              },
+              {
+                "id": "243353c337a5cd46",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "",
+                    "matchingCase": false,
+                    "explainSearch": false,
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              },
+              {
+                "id": "742dc37e3f20c475",
+                "type": "leaf",
+                "state": {
+                  "type": "bookmarks",
+                  "state": {}
+                }
+              }
+            ]
+          },
+          {
+            "id": "65385c6b4f6d8652",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "c14d98d03df98c0b",
+                "type": "leaf",
+                "state": {
+                  "type": "recent-files",
+                  "state": {}
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 401.5
+      },
+      "right": {
+        "id": "dff91031da32446c",
+        "type": "split",
+        "children": [
+          {
+            "id": "63a38264794c73f6",
+            "type": "tabs",
+            "dimension": 31.944444444444443,
+            "children": [
+              {
+                "id": "7232d31eb2400c1b",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "file": "A001001-工作手册大纲.md",
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              },
+              {
+                "id": "6f28fe1ab6d85135",
+                "type": "leaf",
+                "state": {
+                  "type": "outgoing-link",
+                  "state": {
+                    "file": "A001001-工作手册大纲.md",
+                    "linksCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              },
+              {
+                "id": "b5b77200411c4684",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "useHierarchy": true
+                  }
+                }
+              },
+              {
+                "id": "1f3809cbcaf2ab06",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {
+                    "file": "A001001-工作手册大纲.md"
+                  }
+                }
+              }
+            ],
+            "currentTab": 3
+          },
+          {
+            "id": "5bad03215a01c4f0",
+            "type": "tabs",
+            "dimension": 31.944444444444443,
+            "children": [
+              {
+                "id": "7e60c052e7ac3f18",
+                "type": "leaf",
+                "state": {
+                  "type": "todo",
+                  "state": {}
+                }
+              }
+            ]
+          },
+          {
+            "id": "9fa1651c9ee4899d",
+            "type": "tabs",
+            "dimension": 36.11111111111111,
+            "children": [
+              {
+                "id": "934bc9e65c8c8dce",
+                "type": "leaf",
+                "state": {
+                  "type": "calendar",
+                  "state": {}
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 465.5
+      },
+      "left-ribbon": {
+        "hiddenItems": {
+          "switcher:打开快速切换": false,
+          "graph:查看关系图谱": false,
+          "canvas:新建白板": false,
+          "daily-notes:打开/创建今天的日记": false,
+          "templates:插入模板": false,
+          "command-palette:打开命令面板": false,
+          "workspaces:管理工作区布局": false
+        }
+      },
+      "active": "648a403274fcef6e"
+    }
+  },
+  "active": "日常工作区"
+}
