@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "67d5e618804e96e9",
+        "id": "8cf76e7cede840d5",
         "type": "tabs",
         "children": [
           {
-            "id": "bc1f9f7ccec53217",
+            "id": "a89b20b28ddda3c3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "A001-图书管理员工作手册/A001003-使用Vscode访问Github上的图书馆.md",
+                "file": "A001-图书管理员工作手册/A001002-Obsidian快速入门介绍.md",
                 "mode": "source",
                 "source": false
               }
@@ -68,6 +68,20 @@
         ]
       },
       {
+        "id": "4f496fbc822fbd2d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bc1f9f7ccec53217",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
         "id": "7d3c0fffec15088e",
         "type": "tabs",
         "children": [
@@ -100,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "A001-图书管理员工作手册/A001003-使用Vscode访问Github上的图书馆.md",
+                "file": "A001-图书管理员工作手册/A001002-Obsidian快速入门介绍.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "A001-图书管理员工作手册/A001003-使用Vscode访问Github上的图书馆.md",
+                "file": "A001-图书管理员工作手册/A001002-Obsidian快速入门介绍.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "A001-图书管理员工作手册/A001003-使用Vscode访问Github上的图书馆.md"
+                "file": "A001-图书管理员工作手册/A001002-Obsidian快速入门介绍.md"
               }
             }
           }
@@ -192,12 +206,12 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "bc1f9f7ccec53217",
+  "active": "a89b20b28ddda3c3",
   "lastOpenFiles": [
-    "管理员日志-ApeironLi/2023-06-11.md",
-    "A001-图书管理员工作手册/A001002-Obsidian快速入门介绍.md",
     "A001-图书管理员工作手册/A001003-使用Vscode访问Github上的图书馆.md",
+    "A001-图书管理员工作手册/A001002-Obsidian快速入门介绍.md",
     "A001-图书管理员工作手册/A001001-工作手册大纲.md",
+    "管理员日志-ApeironLi/2023-06-11.md",
     "未命名 2.canvas",
     "未命名 1.canvas",
     "2023-06-11.md",

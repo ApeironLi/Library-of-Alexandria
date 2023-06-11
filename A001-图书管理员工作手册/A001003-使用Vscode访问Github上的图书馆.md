@@ -36,3 +36,6 @@ https://code.visualstudio.com/docs/sourcecontrol/overview
 #### 4.2 克隆仓库并更改
 - 选择一个需要克隆的Github项目，选择一个本地文件夹，该项目将被克隆到这个本地文件夹中。
 - 在此基础上进行更改后参照4.1操作即可。
+
+#### 4.3 特别注意
+- Github连接国内网络很不稳定（哪怕使用了VPN），故pull和push时都可能出现卡顿，属于正常问题不要慌更不要乱操作。
