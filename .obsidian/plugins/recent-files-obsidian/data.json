@@ -1,16 +1,32 @@
 {
   "recentFiles": [
     {
-      "basename": "A001002-Obsidian快速入门介绍",
-      "path": "A001-图书管理员工作手册/A001002-Obsidian快速入门介绍.md"
+      "basename": "A002001-配置你的Ubuntu主机",
+      "path": "A002-配置你的Ubuntu主机/A002001-配置你的Ubuntu主机.md"
+    },
+    {
+      "basename": "A002002-BIOS模式",
+      "path": "A002-配置你的Ubuntu主机/A002002-BIOS模式.md"
+    },
+    {
+      "basename": "A002003-nvcc和nvidia-smi显示的cuda版本不同",
+      "path": "A002-配置你的Ubuntu主机/A002003-nvcc和nvidia-smi显示的cuda版本不同.md"
     },
     {
       "basename": "A001003-使用Vscode访问Github上的图书馆",
       "path": "A001-图书管理员工作手册/A001003-使用Vscode访问Github上的图书馆.md"
     },
     {
+      "basename": "A001002-Obsidian快速入门介绍",
+      "path": "A001-图书管理员工作手册/A001002-Obsidian快速入门介绍.md"
+    },
+    {
       "basename": "A001001-工作手册大纲",
       "path": "A001-图书管理员工作手册/A001001-工作手册大纲.md"
+    },
+    {
+      "basename": "2023-06-12",
+      "path": "管理员日志-ApeironLi/2023-06-12.md"
     },
     {
       "basename": "2023-06-11",
