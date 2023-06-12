@@ -26,7 +26,7 @@
 #### 1.1 制作系统盘
 
 - 1.1.1 拷贝系统盘文件，我们采用最稳定的Ubuntu18.04.6作为推荐系统：
-```path
+```sh
 seuiv@10.193.0.31: /mnt/LOA-Local/ubuntu-18.04.6-desktop-amd64.iso
 ```
 - 1.1.2 找到一个U盘（内存大于3G），备份其中的所有内容。
@@ -64,7 +64,7 @@ sudo passwd
 	- 在文件中写入 blacklist nouveau 换行 options nouveau modeset=0
 	- 执行 sudo update-initramfs -u 和 sudo reboot使更改生效
 	- 检查是否成功禁用 lsmod | grep nouveau（无输出即禁用成功）
-- 2.2.3 安装gcc和make
+- 2.2.3 安装相关库
 ```sh
 sudo apt intstall gcc
 sudo apt install make
@@ -117,3 +117,41 @@ nvcc -V
 注：[[A002003-nvcc和nvidia-smi显示的cuda版本不同]]？
 
 ### 4. 安装Cudnn
+
+Cudnn可以用很多方式安装，我们推荐基于deb安装包的安装方式。
+
+- 4.1 安装zlib库
+```sh
+sudo apt install zlib1g
+sudo apt install g++
+sudo apt install libfreeimage3 libfreeimage-dev
+```
+
+- 4.2 下载Cudnn的deb安装包，地址：
+```sh
+seuiv@10.193.0.31: /mnt/LOA-Local/cudnn-local-repo-ubuntu1804-8.9.2.26_1.0-1_amd64.deb
+```
+
+- 4.3 进入deb安装包地址并开始配置：
+```sh
+sudo dpkg -i cudnn-local-repo-${distro}-8.9.2.26-1_1.0-1_amd64.deb
+sudo cp /var/cudnn-local-repo-*/cudnn-local-*-keyring.gpg /usr/share/keyrings/
+sudo apt-get update
+# 安装cuda运行库
+sudo apt-get install libcudnn8=8.9.2.26-1+cuda11.8 #没有匹配的11.7，使用11.8向下兼容
+# 安装cuda开发者库
+sudo apt-get install libcudnn8-dev=8.9.2.26-1+cuda11.8
+# 安装代码实例
+sudo apt-get install libcudnn8-samples=8.9.2.26-1+cuda11.8
+```
+
+- 4.5 检查cudnn是否成功安装
+```sh
+cp -r /usr/src/cudnn_samples_v8/ $HOME
+cd $HOME/cudnn_samples_v8/mnistCUDNN
+make clean && make
+./mnistCUDNN
+```
+```Output
+Test passed!
+```
