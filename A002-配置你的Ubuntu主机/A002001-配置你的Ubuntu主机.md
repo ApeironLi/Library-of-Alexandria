@@ -64,7 +64,7 @@ sudo passwd
 	- 在文件中写入 blacklist nouveau 换行 options nouveau modeset=0
 	- 执行 sudo update-initramfs -u 和 sudo reboot使更改生效
 	- 检查是否成功禁用 lsmod | grep nouveau（无输出即禁用成功）
-- 2.2.3 安装相关库
+- 2.2.3 安装依赖库
 ```sh
 sudo apt intstall gcc
 sudo apt install make
@@ -120,7 +120,7 @@ nvcc -V
 
 Cudnn可以用很多方式安装，我们推荐基于deb安装包的安装方式。
 
-- 4.1 安装zlib库
+- 4.1 安装依赖库
 ```sh
 sudo apt install zlib1g
 sudo apt install g++
