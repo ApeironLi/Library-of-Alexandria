@@ -5,8 +5,16 @@
       "path": "A002-配置你的Ubuntu主机/A002001-配置你的Ubuntu主机.md"
     },
     {
+      "basename": "2023-06-21",
+      "path": "管理员日志-ApeironLi/2023-06-21.md"
+    },
+    {
       "basename": "A002002-BIOS模式",
       "path": "A002-配置你的Ubuntu主机/A002002-BIOS模式.md"
+    },
+    {
+      "basename": "2023-06-15",
+      "path": "管理员日志-ApeironLi/2023-06-15.md"
     },
     {
       "basename": "A002003-nvcc和nvidia-smi显示的cuda版本不同",
