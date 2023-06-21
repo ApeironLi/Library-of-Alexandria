@@ -4,7 +4,7 @@
 
 **编号：** A002001
 
-**修订：** 2023.6.12 Ver.1.0
+**修订：** 2023.6.21 Ver.1.1
 
 ### Basic TODO List
 - [ ] 安装Ubuntu18.04系统
@@ -17,9 +17,11 @@
 ### Advanced TODO List
 - [ ] 配置VPN
 - [ ] 安装和配置Vscode
-- [ ] 安装和配置Obsidian
-- [ ] 安装输入法
+- [ ] 配置远程连接
+- [ ] 安装Obsidian
 - [ ] 安装Google浏览器
+- [ ] 安装输入法 
+- [ ] 安装Zotero
 
 ### 1. 安装/重装Ubuntu系统
 
@@ -42,6 +44,26 @@ seuiv@10.193.0.31: /mnt/LOA-Local/ubuntu-18.04.6-desktop-amd64.iso
 - 1.2.6 我们推荐使用Erase disk and install Ubuntu来进行重新安装，但注意，这种方式会清除所有原系统上的文件（但不会清除挂载硬盘上的文件）。
 - 1.2.7 选择系统安装的硬盘，不要选择将系统装在挂载硬盘上（即保持默认即可）。
 - 1.2.8 选择你的时区、名称和密码。本组所有名称一律统一为seuiv以便远程控制。
+
+#### 1.3 挂载硬盘
+- 1.3.1 对于不需要格式化的硬盘，搜索应用disk将硬盘直接挂载（如需要格式化则在disk应用中直接格式化硬盘即可）
+- 1.3.2 查看硬盘的UUID
+```sh
+sudo fdisk -l # 查看硬盘名称，一般是/dev/sda或/dev/sdb
+sudo blkid /dev/sda # 查看硬盘UUID
+```
+- 1.3.3 设置开机自动挂载
+```sh
+sudo nautilus
+进入 /etc/fstab 在文件最后添加
+UUID="xxxxx"（查询的UUID） /mnt(挂载点不存在时需要手动创建) ext4 defaults 0 2
+```
+- 1.3.4 挂载
+```sh
+sudo mount -a
+```
+- 1.3.5 重启生效
+
 ---
 ##### BreakTime
 ---
@@ -213,6 +235,8 @@ exit()
 - 7.2.2 [大机场](https://大机场.shop/#/login)购买：注意，N2ray官方给出的Linux一键命令是无法执行的，由于config.yaml无法从N2ray服务器下载。需要在你的windows设备或MacOS设备上使用一键配置ClashX后找到配置文件。
 注意：大机场非常便宜，且流量很多，但速度相对慢，且存在开机自启动错误，每次开机都需要手动启动。
 
+可以在seuiv@10.193.0.31:/mnt/LOA-Local/public-config.yaml获取公用配置文件。
+
 #### 7.3 配置Clash通用文件并设置开机自启动
 
 使用我们提供的脚本clash_install.sh，需要修改其中的若干部分：
@@ -231,4 +255,55 @@ systemctl start clash
 ### 8. 安装和配置Vscode
 
 - 8.1 [官网](https://code.visualstudio.com)下载vscode安装包(.deb文件)，双击deb文件安装
-- 8.2 
+- 8.2 登陆你的Github账户（Optional）
+
+### 9. 配置远程连接
+
+#### 9.1 配置ssh远程连接
+
+- 9.1.1 安装OpenSHH用户端（允许控制其他设备）
+```sh
+sudo apt-get install openssh-client
+```
+- 9.1.2 安装OpenSHH服务端（允许被其他设备控制）
+```sh
+sudo apt-get install openssh-server
+```
+- 9.1.3 在被控端查询ip
+```sh
+ifconfig
+```
+- 9.1.4 在控制端为被控端生成密钥（Ubuntu和Macbook）
+```sh
+ssh-keygen -R 被控端ip
+```
+- 9.1.5 在控制端连接被控端，注意这种控制方式仅限校园网连接。还需要注意，连接SEU-WLAN和CIAO时主机的IP地址不同。
+```sh
+ssh seuiv@xxx.xxx.xxx.xxx(用户名@ip地址)
+```
+- 9.1.6 校外控制主机
+	- 9.1.6.1 在控制端下载[东南大学VPN客户端](https://vpn.seu.edu.cn/)
+	- 9.1.6.2 连接东大VPN：地址vpn.seu.edu.cn；账号为一卡通号，需要手机验证码。
+	- 9.1.6.3 按照9.1.5远程连接即可，注意此时被控端只能连接SEU-WLAN。
+
+- 9.1.7 其他注意事项：远程连接执行程序时需要保持连接不断，因此需要控制端和被控端均处于开机且稳定连接状态。因此建议使用你的移动电脑通过Sunclient远程控制一台本地Ubuntu主机，再使用这台主机控制实验室的server。
+
+#### 9.2 配置Vscode远程连接
+
+- 9.2.1 在Vscode内安装插件 Remote-SSH，Remote Explorer和Remote-SSH:Editing Configuration Files.
+- 9.2.2 左下角远程连接按钮->连接到Host->添加新的Host->选择第一个配置文件更新
+
+#### 9.3 [[A001003-使用Vscode访问Github上的图书馆]]
+
+#### 9.4 安装向日葵
+下载[图形版Sunclient](https://sunlogin.oray.com)
+
+### 10. [[A001002-Obsidian快速入门介绍]]
+
+### 11. Google Chrome
+直接搜索Google Chrome即可
+
+### 12. 安装搜狗输入法
+
+### 13. 安装Zotero
+Ubuntu应用商店
