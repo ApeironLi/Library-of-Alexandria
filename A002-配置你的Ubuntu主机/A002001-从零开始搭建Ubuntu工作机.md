@@ -1,10 +1,7 @@
-## A002001：配置你的Ubuntu主机
-
 **作者：** ApeironLi
+**修订：** 2023.6.23 Ver.1.2
 
-**编号：** A002001
-
-**修订：** 2023.6.21 Ver.1.1
+#Ubuntu
 
 ### Basic TODO List
 - [ ] 安装Ubuntu18.04系统
@@ -20,13 +17,13 @@
 - [ ] 配置远程连接
 - [ ] 安装Obsidian
 - [ ] 安装Google浏览器
-- [ ] 安装输入法 
 - [ ] 安装Zotero
+- [ ] 安装搜狗输入法
 
+---
 ### 1. 安装/重装Ubuntu系统
 
 #### 1.1 制作系统盘
-
 - 1.1.1 拷贝系统盘文件，我们采用最稳定的Ubuntu18.04.6作为推荐系统：
 ```sh
 seuiv@10.193.0.31: /mnt/LOA-Local/ubuntu-18.04.6-desktop-amd64.iso
@@ -65,9 +62,6 @@ sudo mount -a
 - 1.3.5 重启生效
 
 ---
-##### BreakTime
----
-
 ### 2. 安装Nvidia显卡驱动程序
 
 #### 2.1 安装之前
@@ -100,13 +94,11 @@ sudo apt install make
 nvidia-smi
 ```
 
+---
 ### 3. 安装Cuda-Toolkit
 
 #### 3.1 安装Cuda
 - 3.1.1 前往官网选择对应的[Cuda-Toolkit](https://developer.nvidia.com/cuda-11-7-0-download-archive)（我们强烈推荐11.7经典版本）按照提示执行下载指令并切换到包含cuda安装程序包的目录，通过root身份运行sh ./xxxxxxx.run安装cuda-toolkit。
----
-##### BreakTime
----
 - 3.1.2 安装cuda-toolkit：在安装清单中取消安装驱动（第一项），其余都需要安装。
 - 3.1.3 为cuda-toolkit添加配置文件
 管理员权限打开可视化界面
@@ -130,7 +122,6 @@ nvcc -V
 ```
 
 #### 3.2 测试cuda是否安装成功
-
 - 3.2.1 运行同步下载的demo程序：
 ```sh
 /usr/local/cuda/extras/demo_suite/deviceQuery
@@ -139,22 +130,19 @@ nvcc -V
 - 3.2.3 运行nvcc -V
 注：[[A002003-nvcc和nvidia-smi显示的cuda版本不同]]？
 
+---
 ### 4. 安装Cudnn
-
 Cudnn可以用很多方式安装，我们推荐基于deb安装包的安装方式。
-
 - 4.1 安装依赖库
 ```sh
 sudo apt install zlib1g
 sudo apt install g++
 sudo apt install libfreeimage3 libfreeimage-dev
 ```
-
 - 4.2 下载Cudnn的deb安装包，地址：
 ```sh
 seuiv@10.193.0.31: /mnt/LOA-Local/cudnn-local-repo-ubuntu1804-8.9.2.26_1.0-1_amd64.deb
 ```
-
 - 4.3 进入deb安装包地址并开始配置：
 ```sh
 sudo dpkg -i cudnn-local-repo-${distro}-8.9.2.26-1_1.0-1_amd64.deb
@@ -167,8 +155,7 @@ sudo apt-get install libcudnn8-dev=8.9.2.26-1+cuda11.8
 # 安装代码实例
 sudo apt-get install libcudnn8-samples=8.9.2.26-1+cuda11.8
 ```
-
-- 4.5 检查cudnn是否成功安装
+- 4.4 检查cudnn是否成功安装
 ```sh
 cp -r /usr/src/cudnn_samples_v8/ $HOME
 cd $HOME/cudnn_samples_v8/mnistCUDNN
@@ -179,8 +166,8 @@ make clean && make
 Test passed!
 ```
 
+---
 ### 5. 安装Anaconda
-
 - 5.1 下载Anaconda安装包（ 不要选择清华源）
 	- 地址1：官网Anaconda3-2023.03-1-Linux-x86_64.sh
 	- 地址2：seuiv@10.193.0.31: /mnt/LOA-Local/Anaconda3-2023.03-1-Linux-x86_64.sh
@@ -188,9 +175,6 @@ Test passed!
 ```sh
 bash Anaconda3-2023.03-1-Linux-x86_64.sh
 ```
----
-##### BreakTime
----
 - 5.3 重启电脑
 - 5.4 更新conda
 ```conda
@@ -198,14 +182,12 @@ conda update conda
 ```
 - 5.5 生成你的第一个conda虚拟环境
 
+---
 ### 6. 安装Pytorch
-
 - 6.1 特别注意：官网提供的torch安装方式并不适合本教程，请使用pip3进行安装
-
 ```sh
 pip3 install torch torchvision torchaudio
 ```
-
 - 6.2 检查torch是否可用，cuda是否正常
 ```python
 python
@@ -213,14 +195,11 @@ import torch
 torch.cuda.is_available()
 exit()
 ```
----
-##### BreakTime
----
 
+---
 ### 7. 配置VPN
 
 #### 7.1 摘要
-
 我们推荐使用Clash在Ubuntu上管理VPN，其他设备（如Windows、MacOS、Androrid和IOS等系统）如何配置VPN可以见[N2ray](https://dash.n2ray.dev/service)和 [大机场](https://大机场.shop/#/login)给出的教程。对于Ubuntu上的Clash，关键在于三个文件：
 - Clash 配置文件 config.yaml
 - Clash 二进制文件 clash.gz
@@ -228,39 +207,34 @@ exit()
 其中后两个文件可以根据本文附带的脚本直接下载安装，在不同主机上通用。config.yaml则需要自己购买订阅。
 
 #### 7.2 获得配置文件
-
 - 7.2.1 [N2ray](https://dash.n2ray.dev/service)购买：注意，N2ray官方给出的Linux一键命令是无法执行的，由于config.yaml无法从N2ray服务器下载。需要在你的windows设备或MacOS设备上下载后找到配置文件（app内就可以定位）。将找到的配置文件拖到Ubuntu的"/etc/clash"文件夹中（地址千万不能错）并将配置文件重命名为config.yaml。
 注意：N2ray相对较贵，且流量较少，但速度较快，且不存在自启动错误问题。
-
 - 7.2.2 [大机场](https://大机场.shop/#/login)购买：注意，N2ray官方给出的Linux一键命令是无法执行的，由于config.yaml无法从N2ray服务器下载。需要在你的windows设备或MacOS设备上使用一键配置ClashX后找到配置文件。
-注意：大机场非常便宜，且流量很多，但速度相对慢，且存在开机自启动错误，每次开机都需要手动启动。
-
-可以在seuiv@10.193.0.31:/mnt/LOA-Local/public-config.yaml获取公用配置文件。
+注意：大机场非常便宜，且流量很多，但速度相对慢，且存在开机自启动错误，每次开机都需要手动启动。可以在seuiv@10.193.0.31:/mnt/LOA-Local/public-config.yaml获取公用配置文件。
 
 #### 7.3 配置Clash通用文件并设置开机自启动
-
 使用我们提供的脚本clash_install.sh，需要修改其中的若干部分：
 \[Service\]中User=主机的用户名。
 
-注意：
-- 1. 如何检查Clash的运行状态？
+#### 7.4 其他注意事项
+- 7.4.1. 如何检查Clash的运行状态？
 ```sh
 systemctl status clash --no-pager -l
 ```
-- 2. 如果你使用的是大机场，则需要每次开机后手动执行如下命令开启Clash。
+- 7.4.2. 如果你使用的是大机场，则需要每次开机后手动执行如下命令开启Clash。
 ```sh
 systemctl start clash
 ```
 
+---
 ### 8. 安装和配置Vscode
-
 - 8.1 [官网](https://code.visualstudio.com)下载vscode安装包(.deb文件)，双击deb文件安装
 - 8.2 登陆你的Github账户（Optional）
 
+---
 ### 9. 配置远程连接
 
 #### 9.1 配置ssh远程连接
-
 - 9.1.1 安装OpenSHH用户端（允许控制其他设备）
 ```sh
 sudo apt-get install openssh-client
@@ -285,11 +259,9 @@ ssh seuiv@xxx.xxx.xxx.xxx(用户名@ip地址)
 	- 9.1.6.1 在控制端下载[东南大学VPN客户端](https://vpn.seu.edu.cn/)
 	- 9.1.6.2 连接东大VPN：地址vpn.seu.edu.cn；账号为一卡通号，需要手机验证码。
 	- 9.1.6.3 按照9.1.5远程连接即可，注意此时被控端只能连接SEU-WLAN。
-
 - 9.1.7 其他注意事项：远程连接执行程序时需要保持连接不断，因此需要控制端和被控端均处于开机且稳定连接状态。因此建议使用你的移动电脑通过Sunclient远程控制一台本地Ubuntu主机，再使用这台主机控制实验室的server。
 
 #### 9.2 配置Vscode远程连接
-
 - 9.2.1 在Vscode内安装插件 Remote-SSH，Remote Explorer和Remote-SSH:Editing Configuration Files.
 - 9.2.2 左下角远程连接按钮->连接到Host->添加新的Host->选择第一个配置文件更新
 
@@ -298,12 +270,37 @@ ssh seuiv@xxx.xxx.xxx.xxx(用户名@ip地址)
 #### 9.4 安装向日葵
 下载[图形版Sunclient](https://sunlogin.oray.com)
 
+---
 ### 10. [[A001002-Obsidian快速入门介绍]]
 
+---
 ### 11. Google Chrome
-直接搜索Google Chrome即可
+直接搜索Google Chrome即可。
 
-### 12. 安装搜狗输入法
+---
+### 12. 安装Zotero
+在Ubuntu应用商店直接安装即可。
 
-### 13. 安装Zotero
-Ubuntu应用商店
+---
+### 13. 安装搜狗输入法
+- 13.1 添加中文语言支持：系统设置->区域和语言->管理已安装的语言->在“语言”tab下点击“添加或删除语言”，弹出“已安装语言”窗口，勾选中文简体，点击应用，等待下载。
+- 13.2 卸载系统自带的ibus输入法：
+```sh
+sudo apt purge ibus
+```
+- 13.3 安装并选择fcitx，安装后在“语言”tab下将键盘输入法系统切换为fcitx，点击将配置应用到整个系统。
+```sh
+sudo apt-get install fcitx
+```
+- 13.4 在[搜狗输入法官网](https://shurufa.sogou.com/linux)下载搜狗输入法deb文件
+- 13.5 在文件下载位置使用dpkg进行搜狗输入法安装
+```sh
+sudo dpkg -i sogoupinyin_xxxxx_amd64.deb
+```
+- 13.6 安装输入法依赖项
+```sh
+sudo apt install libqt5qml5 libqt5quick5 libqt5quickwidgets5 qml-module-qtquick2
+sudo apt install libgsettings-qt1
+```
+- 13.7 重启电脑
+- 13.8 管理输入法，右侧上方小键盘->配置输入法（Configure Current Input Method）->添加搜狗输入法（sogoupinyin）并在Global Config中将Trigger Input Method设置为习惯的切换方法。

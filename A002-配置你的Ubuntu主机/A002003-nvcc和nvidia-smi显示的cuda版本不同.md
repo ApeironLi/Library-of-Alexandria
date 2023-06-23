@@ -1,8 +1,4 @@
-
-**改写作者：** ApeironLi，[原文地址](https://www.jianshu.com/p/eb5335708f2a)
-
-**编号：** A002003
-
+**作者：** ApeironLi，[原文地址](https://www.jianshu.com/p/eb5335708f2a
 **修订：** 2023.6.12 Ver.1.0
 
 nvcc是CUDA语言的编译器，将程序编译成可执行的二进制文件。
