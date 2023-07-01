@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "8cf76e7cede840d5",
+        "id": "af77988088957386",
         "type": "tabs",
         "children": [
           {
-            "id": "a89b20b28ddda3c3",
+            "id": "1d4990026e3cd7b5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "A002-配置你的Ubuntu主机/A002001-从零开始搭建Ubuntu工作机.md",
+                "file": "A002-配置你的Ubuntu主机/A002003-nvcc和nvidia-smi显示的cuda版本不同.md",
                 "mode": "source",
                 "source": false
               }
@@ -114,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "A002-配置你的Ubuntu主机/A002001-从零开始搭建Ubuntu工作机.md",
+                "file": "A002-配置你的Ubuntu主机/A002003-nvcc和nvidia-smi显示的cuda版本不同.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "A002-配置你的Ubuntu主机/A002001-从零开始搭建Ubuntu工作机.md",
+                "file": "A002-配置你的Ubuntu主机/A002003-nvcc和nvidia-smi显示的cuda版本不同.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "A002-配置你的Ubuntu主机/A002001-从零开始搭建Ubuntu工作机.md"
+                "file": "A002-配置你的Ubuntu主机/A002003-nvcc和nvidia-smi显示的cuda版本不同.md"
               }
             }
           }
@@ -206,14 +206,17 @@
       "graph:查看关系图谱": false
     }
   },
-  "active": "a89b20b28ddda3c3",
+  "active": "f5ce2aed039a18dc",
   "lastOpenFiles": [
+    "A002-配置你的Ubuntu主机/A002001-从零开始搭建Ubuntu工作机.md",
+    "A002-配置你的Ubuntu主机/A002004-重装显卡驱动.md",
     "A002-配置你的Ubuntu主机/A002002-BIOS模式.md",
     "A002-配置你的Ubuntu主机/A002003-nvcc和nvidia-smi显示的cuda版本不同.md",
-    "A002-配置你的Ubuntu主机/A002001-从零开始搭建Ubuntu工作机.md",
+    "未命名.canvas",
+    "A001-图书管理员工作手册/A001001-工作手册大纲.md",
     "A001-图书管理员工作手册/A001002-Obsidian快速入门介绍.md",
     "A001-图书管理员工作手册/A001003-使用Vscode访问Github上的图书馆.md",
-    "A001-图书管理员工作手册/A001001-工作手册大纲.md",
+    "A003-Probablistic-Machine-Learning-Tubingen-Philip/00-Course-Outline.md",
     "管理员日志-ApeironLi/2023-06-23.md",
     "管理员日志-ApeironLi/2023-06-21.md",
     "管理员日志-ApeironLi/2023-06-15.md",
@@ -223,7 +226,6 @@
     "管理员日志-ApeironLi/2023-06-11.md",
     "未命名 2.canvas",
     "未命名 1.canvas",
-    "2023-06-11.md",
-    "未命名.canvas"
+    "2023-06-11.md"
   ]
 }
