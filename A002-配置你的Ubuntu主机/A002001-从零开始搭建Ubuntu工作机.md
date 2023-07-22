@@ -192,7 +192,7 @@ conda update conda
 ```
 - 5.5 生成你的第一个conda虚拟环境
 ```conda
-conda create -name [你的环境名字] python==3.x.x[python版本]
+conda create --name [你的环境名字] python==3.x.x[python版本]
 ```
 
 ---
