@@ -1,5 +1,5 @@
-**作者：** ApeironLi
-**修订：** 2023.6.23 Ver.1.2
+**作者：** ApeironLi; LeafZhang
+**修订：** 2023.07.21 Ver.1.3
 #Ubuntu
 
 ### Basic TODO List
@@ -45,8 +45,8 @@ seuiv@10.193.0.31: /mnt/LOA-Local/ubuntu-18.04.6-desktop-amd64.iso
 - 1.3.1 对于不需要格式化的硬盘，搜索应用disk将硬盘直接挂载（如需要格式化则在disk应用中直接格式化硬盘即可）
 - 1.3.2 查看硬盘的UUID
 ```sh
-sudo fdisk -l # 查看硬盘名称，一般是/dev/sda或/dev/sdb
-sudo blkid /dev/sda # 查看硬盘UUID
+sudo fdisk -l # 查看硬盘名称，一般是/dev/sda1或/dev/sdb1，注意要在Device栏查看
+sudo blkid /dev/sda1 # 查看硬盘UUID，注意不是PTUUID或者PARTUUID
 ```
 - 1.3.3 设置开机自动挂载
 ```sh
@@ -72,22 +72,28 @@ sudo passwd
 ```
 
 #### 2.2 安装显卡驱动
+- 2.2.0 直接在应用中打开Software&Updates的Additional Drivers，选择版本>450的显驱安装。若能够完成，直接跳到2.2.5。
 - 2.2.1 下载显卡驱动（.run程序）（**SmallBreak：下载时间不长不短可以泡杯茶**），下载位置就在2.1.1中Nvidia官网。
 - 2.2.2 禁用Ubuntu自带的nouveau开源显卡驱动程序
 	- 进入管理员权限的图形化界面：sudo nautilus
 	- 创建黑名单文件 /etc/modprobe.d/blacklist-nouveau.conf
 	- 在文件中写入 blacklist nouveau 换行 options nouveau modeset=0
-	- 执行 sudo update-initramfs -u 和 sudo reboot使更改生效
+	- 执行 sudo update-initramfs -u 和 sudo reboot使更改生效（此时显示屏分辨率可能异常，忽略即可）
 	- 检查是否成功禁用 lsmod | grep nouveau（无输出即禁用成功）
-- 2.2.3 安装依赖库
+- 2.2.3 更新apt,安装依赖库
 ```sh
+sudo apt-get update
+sudo apt-get upgrade #时间会比较长
 sudo apt intstall gcc
 sudo apt install make
+sudo apt install libc-dev libc6-dev
 ```
+
 - 2.2.4 下载驱动程序后，切换到包含驱动程序包的目录并通过以 root 身份运行 sh ./NVIDIA-Linux-x86_64-525.116.04.run 安装驱动程序。
 	- 注：32-bit适应性库不需要安装
 	- 注：vulkan库不需要安装
 	- 注：libglvnd库不需要安装
+ 	- 注：安装完成后，执行software更新并重新启动
 - 2.2.5 检查驱动安装：
 ```sh
 nvidia-smi
@@ -115,7 +121,7 @@ export CUDA_HOME=$CUDA_HOME:/usr/local/cuda
 ```sh
 source ~/.bashrc
 ```
-检查配置是否成功：
+- 3.1.4 检查配置是否成功
 ```sh
 nvcc -V
 ```
