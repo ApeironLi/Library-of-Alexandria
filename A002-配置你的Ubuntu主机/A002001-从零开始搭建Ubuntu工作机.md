@@ -197,6 +197,10 @@ conda create --name [你的环境名字] python==3.x.x[python版本]
 
 ---
 ### 6. 安装Pytorch
+- 6.0 请进入5.5创建的环境当中
+```conda
+conda activate [你的环境名字]
+```
 - 6.1 特别注意：官网提供的torch安装方式并不适合本教程，请使用pip3进行安装
 ```sh
 pip3 install torch torchvision torchaudio
@@ -205,7 +209,7 @@ pip3 install torch torchvision torchaudio
 ```python
 python
 import torch
-torch.cuda.is_available()
+torch.cuda.is_available() #获得True表明cuda可用
 exit()
 ```
 
