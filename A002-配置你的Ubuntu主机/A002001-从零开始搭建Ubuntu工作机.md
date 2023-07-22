@@ -103,7 +103,7 @@ nvidia-smi
 ### 3. 安装Cuda-Toolkit
 
 #### 3.1 安装Cuda
-- 3.1.0 卸载已有的cuda-toolkit，防止后续出现安装多个cuda的情况
+- 3.1.0 卸载已有的cuda-toolkit，防止后续出现安装多个cuda的情况。
 ```sh
 sudo apt-get autoremove nvidia-cuda-toolkit
 ```
@@ -151,11 +151,12 @@ sudo apt install libfreeimage3 libfreeimage-dev
 - 4.2 下载Cudnn的deb安装包，地址：
 ```sh
 seuiv@10.193.0.31: /mnt/LOA-Local/cudnn-local-repo-ubuntu1804-8.9.2.26_1.0-1_amd64.deb
+官网地址（需要nvidia账号）：https://developer.nvidia.com/rdp/cudnn-download
 ```
 - 4.3 进入deb安装包地址并开始配置：
 ```sh
-sudo dpkg -i cudnn-local-repo-${distro}-8.9.2.26-1_1.0-1_amd64.deb
-sudo cp /var/cudnn-local-repo-*/cudnn-local-*-keyring.gpg /usr/share/keyrings/
+sudo dpkg -i xxxxxxxx.deb
+sudo cp /var/cudnn-local-repo-*/cudnn-local-*-keyring.gpg /usr/share/keyrings/ #根据上一行执行提示
 sudo apt-get update
 # 安装cuda运行库
 sudo apt-get install libcudnn8=8.9.2.26-1+cuda11.8 #没有匹配的11.7，使用11.8向下兼容
@@ -178,11 +179,11 @@ Test passed!
 ---
 ### 5. 安装Anaconda
 - 5.1 下载Anaconda安装包（ 不要选择清华源）
-	- 地址1：官网Anaconda3-2023.03-1-Linux-x86_64.sh
+	- 地址1：官网Anaconda3-2023.03-1-Linux-x86_64.sh（版本可以根据官网提供）
 	- 地址2：seuiv@10.193.0.31: /mnt/LOA-Local/Anaconda3-2023.03-1-Linux-x86_64.sh
 - 5.2 进入包含安装包的目录，执行安装包下载Anaconda
 ```sh
-bash Anaconda3-2023.03-1-Linux-x86_64.sh
+bash Anaconda3-2023.03-1-Linux-x86_64.sh #注意enter别把yes/no按掉了
 ```
 - 5.3 重启电脑
 - 5.4 更新conda
@@ -190,6 +191,9 @@ bash Anaconda3-2023.03-1-Linux-x86_64.sh
 conda update conda
 ```
 - 5.5 生成你的第一个conda虚拟环境
+```conda
+conda create -name [你的环境名字] python==3.x.x[python版本]
+```
 
 ---
 ### 6. 安装Pytorch
