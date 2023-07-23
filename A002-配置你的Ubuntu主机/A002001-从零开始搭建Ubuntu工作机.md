@@ -65,7 +65,7 @@ sudo mount -a
 
 #### 2.1 安装之前
 - 2.1.1 显卡驱动程序必须与cuda、pytorch版本匹配。我们推荐使用的cuda版本为11.7，推荐使用的pytorch版本为对应cuda11.7的pytorch版本。因此需要保证安装的显卡驱动版本在[450.80.02以上](https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html)。可以在[Nvidia官网](https://www.nvidia.cn/Download/index.aspx?lang=cn)查询自己显卡对应的驱动程序版本（选择生产分支、语言为中文简体）。
-- 2.1.2 设置root密码：由于后面会用到root，需要先为root赋密码
+- 2.1.2 设置root密码：由于后面会用到root，需要先为root赋密码（如果已知就不需要了）
 ```sh
 sudo passwd
 # enter your passwd
