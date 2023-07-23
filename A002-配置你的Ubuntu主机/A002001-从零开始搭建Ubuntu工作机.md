@@ -158,12 +158,12 @@ seuiv@10.193.0.31: /mnt/LOA-Local/cudnn-local-repo-ubuntu1804-8.9.2.26_1.0-1_amd
 sudo dpkg -i xxxxxxxx.deb
 sudo cp /var/cudnn-local-repo-*/cudnn-local-*-keyring.gpg /usr/share/keyrings/ #根据上一行执行提示
 sudo apt-get update
-# 安装cuda运行库
-sudo apt-get install libcudnn8=8.9.2.26-1+cuda11.8 #没有匹配的11.7，使用11.8向下兼容
+# 安装cuda运行库，注意，[xxxxxxx]为版本号，要与上面对应
+sudo apt-get install libcudnn8=[xxxxxxx]-1+cuda11.8 #没有匹配的11.7，使用11.8向下兼容
 # 安装cuda开发者库
-sudo apt-get install libcudnn8-dev=8.9.2.26-1+cuda11.8
+sudo apt-get install libcudnn8-dev=[xxxxxxx]-1+cuda11.8
 # 安装代码实例
-sudo apt-get install libcudnn8-samples=8.9.2.26-1+cuda11.8
+sudo apt-get install libcudnn8-samples=[xxxxxxx]-1+cuda11.8
 ```
 - 4.4 检查cudnn是否成功安装
 ```sh
