@@ -107,7 +107,7 @@ nvidia-smi
 ```sh
 sudo apt-get autoremove nvidia-cuda-toolkit
 ```
-- 3.1.1 前往官网选择对应的[Cuda-Toolkit](https://developer.nvidia.com/cuda-11-7-0-download-archive)（我们强烈推荐11.7经典版本）按照提示执行下载指令并切换到包含cuda安装程序包的目录（选择run而不是deb），通过root身份运行sh ./xxxxxxx.run安装cuda-toolkit。
+- 3.1.1 前往官网选择对应的[Cuda-Toolkit](https://developer.nvidia.com/cuda-11-7-0-download-archive)（我们强烈推荐11.7经典版本）按照提示执行下载指令并切换到包含cuda安装程序包的目录（选择run而不是deb），通过root身份运行sh ./xxxxxxx.run安装cuda-toolkit。注意：要知道run文件下载到了哪个文件夹。
 - 3.1.2 安装cuda-toolkit：在安装清单中取消安装驱动（第一项，回车键可以取消打叉X），其余都需要安装。
 - 3.1.3 为cuda-toolkit添加配置文件
 管理员权限打开可视化界面
