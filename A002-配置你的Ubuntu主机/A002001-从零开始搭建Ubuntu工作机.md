@@ -115,7 +115,7 @@ sudo apt-get autoremove nvidia-cuda-toolkit
 sudo nautilus
 ```
 进入地址：/home/.bashrc
-添加：
+添加PATH：
 ```sh
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
 export PATH=$PATH:/usr/local/cuda/bin
