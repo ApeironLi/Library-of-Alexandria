@@ -179,13 +179,13 @@ Test passed!
 ---
 ### 5. 安装Anaconda
 - 5.1 下载Anaconda安装包（ 不要选择清华源）
-	- 地址1：官网Anaconda3-2023.03-1-Linux-x86_64.sh（版本可以根据官网提供）
+	- 地址1：官网https://www.anaconda.com（版本可以根据官网提供）
 	- 地址2：seuiv@10.193.0.31: /mnt/LOA-Local/Anaconda3-2023.03-1-Linux-x86_64.sh
 - 5.2 进入包含安装包的目录，执行安装包下载Anaconda
 ```sh
-bash Anaconda3-2023.03-1-Linux-x86_64.sh #注意enter别把yes/no按掉了
+bash Anaconda3-2023.03-1-Linux-x86_64.sh #注意Enter别把yes/no按掉了
 ```
-- 5.3 重启电脑
+- 5.3 重启电脑，进入命令行，发现开头有(base)，证明conda安装成功。
 - 5.4 更新conda
 ```conda
 conda update conda
