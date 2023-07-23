@@ -103,7 +103,7 @@ nvidia-smi
 ### 3. 安装Cuda-Toolkit
 
 #### 3.1 安装Cuda
-- 3.1.0 卸载已有的cuda-toolkit，防止后续出现安装多个cuda的情况。
+- 3.1.0 卸载已有的cuda-toolkit，防止后续出现安装多个cuda的情况。（显示没有就对了，转3.1.1）
 ```sh
 sudo apt-get autoremove nvidia-cuda-toolkit
 ```
