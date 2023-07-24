@@ -148,11 +148,12 @@ sudo apt install zlib1g
 sudo apt install g++
 sudo apt install libfreeimage3 libfreeimage-dev
 ```
-- 4.2 下载Cudnn的deb安装包，地址：
+- 4.2 下载Cudnn的deb安装包，地址二选一：
 ```sh
 seuiv@10.193.0.31: /mnt/LOA-Local/cudnn-local-repo-ubuntu1804-8.9.2.26_1.0-1_amd64.deb
-官网地址（需要nvidia账号）：https://developer.nvidia.com/rdp/cudnn-download
 ```
+官网地址（需要Nvidia账号）：[Nvidia官网](https://developer.nvidia.com/rdp/cudnn-download)
+
 - 4.3 进入deb安装包地址并开始配置：
 ```sh
 sudo dpkg -i xxxxxxxx.deb
@@ -179,7 +180,7 @@ Test passed!
 ---
 ### 5. 安装Anaconda
 - 5.1 下载Anaconda安装包（ 不要选择清华源）
-	- 地址1：官网https://www.anaconda.com（版本可以根据官网提供）
+	- 地址1：[Anaconda官网](https://www.anaconda.com)（版本可以根据官网提供）
 	- 地址2：seuiv@10.193.0.31: /mnt/LOA-Local/Anaconda3-2023.03-1-Linux-x86_64.sh
 - 5.2 进入包含安装包的目录，执行安装包下载Anaconda
 ```sh
