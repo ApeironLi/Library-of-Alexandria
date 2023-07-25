@@ -315,41 +315,41 @@ ssh seuiv@xxx.xxx.xxx.xxx(用户名@ip地址)
 
 ---
 ### 13. 安装输入法（Rime/Google/搜狗）
-- 13.0 添加中文语言支持：系统设置->区域和语言->管理已安装的语言->在“语言”tab下点击“添加或删除语言”，弹出“已安装语言”窗口，勾选中文简体，点击应用，等待下载。
+- 13.1 添加中文语言支持：系统设置->区域和语言->管理已安装的语言->在“语言”tab下点击“添加或删除语言”，弹出“已安装语言”窗口，勾选中文简体，点击应用，等待下载。
 ```
-rime见13.1，Google见13.2，sogou见13.3（不是很推荐）
+rime见13.2，Google见13.3，sogou见13.4（不是很推荐）
 ```
-- 13.1 注意：在我们的测试中，搜狗输入法出现了一些问题。如果你想要安装轻量化的输入法rime（安装时少折腾，配置时多折腾），请执行完13.1后，直接结束安装输入法的步骤。
+- 13.2 注意：在我们的测试中，搜狗输入法出现了一些问题。如果你想要安装轻量化的输入法rime（安装时少折腾，配置时多折腾），请执行完13.1后，直接结束安装输入法的步骤。
 所以，如果你想安装rime输入法：
 ```sh
 sudo apt-get install ibus-rime
 ```
 然后在系统设置->区域和语言->输入源中，+号搜索rime，添加即可。输入框中按下F4，选择简体输入法。
 关于rime的个性化配置，请自行搜索rime官方文档
-- 13.2 注意：在我们的测试中，搜狗输入法出现了一些问题。如果你想要安装轻量化的输入法Google（安装时少折腾，配置时多折腾），请执行完13.2后，直接结束安装输入法的步骤。
+- 13.3 注意：在我们的测试中，搜狗输入法出现了一些问题。如果你想要安装轻量化的输入法Google（安装时少折腾，配置时多折腾），请执行完13.2后，直接结束安装输入法的步骤。
 所以，如果你想安装Google输入法：
 ```sh
 sudo apt-get install fctix
 sudo apt-get install fctix-googlepinyin
 ```
 然后在系统设置->区域和语言->输入源中，+号搜索intelligence，添加即可。同时，切换管理已安装的语言->键盘输入法系统为fctix并重启电脑。
-- 13.3 以下为搜狗输入法安装。卸载系统自带的ibus输入法：
+- 13.4 以下为搜狗输入法安装。卸载系统自带的ibus输入法：
 ```sh
 sudo apt purge ibus
 ```
-- 13.4 安装并选择fcitx，安装后在“语言”tab下将键盘输入法系统切换为fcitx，点击将配置应用到整个系统。
+- 13.5 安装并选择fcitx，安装后在“语言”tab下将键盘输入法系统切换为fcitx，点击将配置应用到整个系统。
 ```sh
 sudo apt-get install fcitx
 ```
-- 13.5 在[搜狗输入法官网](https://shurufa.sogou.com/linux)下载搜狗输入法deb文件
-- 13.6 在文件下载位置使用dpkg进行搜狗输入法安装
+- 13.6 在[搜狗输入法官网](https://shurufa.sogou.com/linux)下载搜狗输入法deb文件
+- 13.7 在文件下载位置使用dpkg进行搜狗输入法安装
 ```sh
 sudo dpkg -i sogoupinyin_xxxxx_amd64.deb
 ```
-- 13.7 安装输入法依赖项
+- 13.8 安装输入法依赖项
 ```sh
 sudo apt install libqt5qml5 libqt5quick5 libqt5quickwidgets5 qml-module-qtquick2
 sudo apt install libgsettings-qt1
 ```
-- 13.8 重启电脑
-- 13.9 管理输入法，右侧上方小键盘->配置输入法（Configure Current Input Method）->添加搜狗输入法（sogoupinyin）并在Global Config中将Trigger Input Method设置为习惯的切换方法。
+- 13.9 重启电脑
+- 13.10 管理输入法，右侧上方小键盘->配置输入法（Configure Current Input Method）->添加搜狗输入法（sogoupinyin）并在Global Config中将Trigger Input Method设置为习惯的切换方法。
