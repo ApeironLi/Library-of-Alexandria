@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "A002-配置你的Ubuntu主机/A002003-nvcc和nvidia-smi显示的cuda版本不同.md",
+                "file": "A002-配置你的Ubuntu主机/A002004-重装显卡驱动.md",
                 "mode": "source",
                 "source": false
               }
@@ -114,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "A002-配置你的Ubuntu主机/A002003-nvcc和nvidia-smi显示的cuda版本不同.md",
+                "file": "A002-配置你的Ubuntu主机/A002004-重装显卡驱动.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "A002-配置你的Ubuntu主机/A002003-nvcc和nvidia-smi显示的cuda版本不同.md",
+                "file": "A002-配置你的Ubuntu主机/A002004-重装显卡驱动.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "A002-配置你的Ubuntu主机/A002003-nvcc和nvidia-smi显示的cuda版本不同.md"
+                "file": "A002-配置你的Ubuntu主机/A002004-重装显卡驱动.md"
               }
             }
           }
@@ -206,12 +206,12 @@
       "graph:查看关系图谱": false
     }
   },
-  "active": "f5ce2aed039a18dc",
+  "active": "1d4990026e3cd7b5",
   "lastOpenFiles": [
+    "A002-配置你的Ubuntu主机/A002003-nvcc和nvidia-smi显示的cuda版本不同.md",
     "A002-配置你的Ubuntu主机/A002001-从零开始搭建Ubuntu工作机.md",
     "A002-配置你的Ubuntu主机/A002004-重装显卡驱动.md",
     "A002-配置你的Ubuntu主机/A002002-BIOS模式.md",
-    "A002-配置你的Ubuntu主机/A002003-nvcc和nvidia-smi显示的cuda版本不同.md",
     "未命名.canvas",
     "A001-图书管理员工作手册/A001001-工作手册大纲.md",
     "A001-图书管理员工作手册/A001002-Obsidian快速入门介绍.md",
