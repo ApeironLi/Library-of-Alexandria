@@ -218,28 +218,42 @@ exit()
 ### 7. 配置VPN
 
 #### 7.1 摘要
-我们推荐使用Clash在Ubuntu上管理VPN，其他设备（如Windows、MacOS、Androrid和IOS等系统）如何配置VPN可以见[N2ray](https://dash.n2ray.dev/service)和 [大机场](https://大机场.shop/#/login)给出的教程。对于Ubuntu上的Clash，关键在于三个文件：
+我们推荐使用Clash在Ubuntu上管理VPN。Clash是一个**跨平台代理程序**（如Windows、MacOS、Androrid和IOS等系统）。Clash代理的VPN购入平台可见：
+- [N2ray](https://dash.n2ray.dev/service)
+- [大机场](https://大机场.shop/#/login)
+- [SakuraCat（推荐⭐）](https://dokidokiweb.com)
+  
+对于Ubuntu上的Clash，关键在于三个文件：
 - Clash 配置文件 config.yaml
 - Clash 二进制文件 clash.gz
 - Clash 国家文件 Country.mmdb
-其中后两个文件可以根据本文附带的脚本直接下载安装，在不同主机上通用。config.yaml则需要自己购买订阅。
+
+其中后两个文件可以根据本文附带的脚本直接下载安装，在不同主机上通用。***而获得config.yaml则需要自己购买订阅！！！*** （这就和你的VPN服务平台有关系了，比如我们提供的N2ray，大机场和SakuraCat） 。
+
+不过没关系，接下来的教程7.3会帮助你考虑到这些问题。
 
 #### 7.2 获得配置文件
 - 7.2.1 [N2ray](https://dash.n2ray.dev/service)购买：注意，N2ray官方给出的Linux一键命令是无法执行的，由于config.yaml无法从N2ray服务器下载。需要在你的windows设备或MacOS设备上下载后找到配置文件（app内就可以定位）。将找到的配置文件拖到Ubuntu的"/etc/clash"文件夹中（地址千万不能错）并将配置文件重命名为config.yaml。
 注意：N2ray相对较贵，且流量较少，但速度较快，且不存在自启动错误问题。
 - 7.2.2 [大机场](https://大机场.shop/#/login)购买：注意，N2ray官方给出的Linux一键命令是无法执行的，由于config.yaml无法从N2ray服务器下载。需要在你的windows设备或MacOS设备上使用一键配置ClashX后找到配置文件。
 注意：大机场非常便宜，且流量很多，但速度相对慢，且存在开机自启动错误，每次开机都需要手动启动。可以在seuiv@10.193.0.31:/mnt/LOA-Local/public-config.yaml获取公用配置文件。
+- 7.2.3 [SakuraCat（推荐）](https://dokidokiweb.com)购买：我们已经提到，获取config.yaml是非常重要的。而config.yaml的来源是订阅地址。用SakuraCat平台获得订阅地址流程如下：
+ `SakuraCat官网->仪表盘->查看教程->复制订阅地址` 
 
-#### 7.3 配置Clash通用文件并设置开机自启动
+#### 7.3 一个配置教程
+ - 注意：如果你能 **完整地（即实现了代理）** 实现接下来教程中的内容，**那么不需要看7.4与7.5** 。
+ - [Clash for Linux教程](https://github.com/wanhebin/clash-for-linux)（Tips: Linux的ip获取指令为ifconfig，在里面找到 `inet` 编号即为ip地址）
+
+#### 7.4 配置Clash通用文件并设置开机自启动
 使用我们提供的脚本clash_install.sh，需要修改其中的若干部分：
-\[Service\]中User=主机的用户名。
+ - Service中User=主机的用户名。
 
-#### 7.4 其他注意事项
-- 7.4.1. 如何检查Clash的运行状态？
+#### 7.5 其他注意事项
+- 7.5.1. 如何检查Clash的运行状态？
 ```sh
 systemctl status clash --no-pager -l
 ```
-- 7.4.2. 如果你使用的是大机场，则需要每次开机后手动执行如下命令开启Clash。
+- 7.5.2. 如果你使用的是大机场，则需要每次开机后手动执行如下命令开启Clash。
 ```sh
 systemctl start clash
 ```
